@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+<div class="chui">
+    <img src="img/chui1.png"/>
+</div>
+<section class="stage">
+    <img class="bg" src="img/bg.jpg">
+
+    <div id="shape" class="cube on">
+        <div class="plane one"><span class="egga egga1"><figure class="eggb">&nbsp;</figure></span></div>
+        <div class="plane two"><span  class="egga egga2"><figure class="eggb">&nbsp;</figure></span></div>
+        <div class="plane three"><span class="egga egga3"><figure class="eggb">&nbsp;</figure></span></div>
+        <img src="img/egg1.png" style="display: none;">
+        <img src="img/egg2.png" style="display: none;">
+        <img src="img/egg3.png" style="display: none;">
+    </div>
+</section>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var over=false;
+    $(".egga").one("click", function (e) {
+        if(over)
+            return
+        var a = $(".eggb", e.target);
+       // var sp=$(".egga", e.target);
+        console.log(e.target)
+        var l, t;
+        l = $(this).offset().left;
+        t = $(this).offset().top;
+
+          console.log(l+";;"+t)
+        $(".chui").animate({//锤子动画
+            "top": t - 25,
+            "left": l +25
+        }, 0, function () {
+
+            $(a).css("background-image", "url(../img/egg1.png)");
+            window.setTimeout(function () {
+                $(a).css("background-image", "url(../img/egg2.png)")
+            }, 33);
+            window.setTimeout(function () {
+                $(a).css("background-image", "url(../img/egg3.png)")
+            }, 33);
+            over=true;
+        }).animate({
+                    "top": t-80  ,
+                    "left": l+65
+                },30);
+    })
+
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
+</body>
+</html>
