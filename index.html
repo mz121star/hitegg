@@ -22,11 +22,13 @@
 </head>
 <body>
 <div class="chui">
-    <img src="img/chui1.png"/>
+    <img src="img/chui1.png" width="80"/>
 </div>
 <section class="stage">
     <img class="bg" src="img/bg.jpg">
-
+    <div class="info">
+        <img src="img/info1.png">
+    </div>
     <div id="shape" class="cube on">
         <div class="plane one"><span class="egga egga1"><figure class="eggb">&nbsp;</figure></span></div>
         <div class="plane two"><span  class="egga egga2"><figure class="eggb">&nbsp;</figure></span></div>
@@ -37,6 +39,7 @@
     </div>
 </section>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="js/jquery.touchy.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script>
@@ -66,11 +69,15 @@
             }, 33);
             over=true;
         }).animate({
-                    "top": t-80  ,
+                    "top": t-50  ,
                     "left": l+65
-                },30);
+       },30);
     })
-
+    var handleTouchyPinch = function (e, $target, data) {
+       console.log(data);
+    };
+    $('.chui').on('touchy-drag', handleTouchyPinch);
+    $('.chui').on('click', function(){console.log(1)});
 </script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 

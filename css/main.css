@@ -100,7 +100,7 @@ textarea {
 .chui {
     position: absolute;
     z-index: 999;
-    top: 10%;
+    top: 26%;
     right: 10px;
     width: 119px;
 }
@@ -133,11 +133,21 @@ body {
     margin: auto;
     position: absolute;
     left: 50%;
-    bottom: 41%;
+    bottom: 39%;
     z-index: 100;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: visible;
     -webkit-transform: rotateX(90deg) rotateZ(0deg);
+}
+
+.info{
+    width: 100%;
+    position: absolute;
+    top: 11%;
+    text-align: center;
+}
+.info img{
+    width: 80%;
 }
 
 .plane {
