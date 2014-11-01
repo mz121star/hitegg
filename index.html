@@ -21,35 +21,78 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-<div class="chui">
+<div class="chui" id="chui">
     <img src="img/chui1.png" width="80"/>
 </div>
 <section class="stage">
     <img class="bg" src="img/bg.jpg">
     <div class="info">
-        <img src="img/info1.png">
+        <img src="img/info1.png" class="infopic">
+        <span class="jiang1" style="top:-200px">
+            <p class="p p1">短融网A轮融资盛宴惊喜不断</p>
+            <p class="p p2"><span class="yellow">3000</span>万元风险保障金保驾护航</p>
+            <p class="p p3">天上掉下<span class="yellow">88</span>元</p>
+            <div  class="p p3"><a href="#" class="button orange">去领钱</a> </div>
+        </span>
     </div>
     <div id="shape" class="cube on">
-        <div class="plane one"><span class="egga egga1"><figure class="eggb">&nbsp;</figure></span></div>
-        <div class="plane two"><span  class="egga egga2"><figure class="eggb">&nbsp;</figure></span></div>
-        <div class="plane three"><span class="egga egga3"><figure class="eggb">&nbsp;</figure></span></div>
+        <div class="plane one"><span class="egga egga1" data-num="1"><figure class="eggb1">&nbsp;</figure></span></div>
+        <div class="plane two"><span  class="egga egga2" data-num="2"><figure class="eggb2">&nbsp;</figure></span></div>
+        <div class="plane three"><span class="egga egga3" data-num="3"><figure class="eggb3">&nbsp;</figure></span></div>
         <img src="img/egg1.png" style="display: none;">
         <img src="img/egg2.png" style="display: none;">
         <img src="img/egg3.png" style="display: none;">
     </div>
 </section>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="js/jquery.touchy.min.js"></script>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/hammer.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script>
-    var over=false;
+    (function(jQuery) {
+
+        jQuery.eventEmitter = {
+            _JQInit: function() {
+                this._JQ = jQuery(this);
+            },
+            emit: function(evt, data) {
+                !this._JQ && this._JQInit();
+                this._JQ.trigger(evt, data);
+            },
+            once: function(evt, handler) {
+                !this._JQ && this._JQInit();
+                this._JQ.one(evt, handler);
+            },
+            on: function(evt, handler) {
+                !this._JQ && this._JQInit();
+                this._JQ.bind(evt, handler);
+            },
+            off: function(evt, handler) {
+                !this._JQ && this._JQInit();
+                this._JQ.unbind(evt, handler);
+            }
+        };
+
+    }(jQuery));
+
+    var over=0;
+    var jiangxiang=0;
+    function App(){
+
+    }
+    jQuery.extend(App.prototype, jQuery.eventEmitter);
+
+    var eggapp=new App();
     $(".egga").one("click", function (e) {
-        if(over)
-            return
-        var a = $(".eggb", e.target);
+        console.log("click")
+        if(over>3)
+            return false;
+        var num =$(this).data("num");
+        jiangxiang=num;
+        console.log(num)
+        var a = $(".eggb"+num);
        // var sp=$(".egga", e.target);
-        console.log(e.target)
+
         var l, t;
         l = $(this).offset().left;
         t = $(this).offset().top;
@@ -60,24 +103,50 @@
             "left": l +25
         }, 0, function () {
 
-            $(a).css("background-image", "url(../img/egg1.png)");
+            $(a).css("background-image", "url(img/egg1.png)");
             window.setTimeout(function () {
-                $(a).css("background-image", "url(../img/egg2.png)")
+                $(a).css("background-image", "url(img/egg2.png)")
             }, 33);
             window.setTimeout(function () {
-                $(a).css("background-image", "url(../img/egg3.png)")
+                $(a).css("background-image", "url(img/egg3.png)")
             }, 33);
-            over=true;
+            over=over+1;
         }).animate({
                     "top": t-50  ,
                     "left": l+65
        },30);
+        eggapp.emit("zhongjiang",{num:num});
+    });
+    $(".p").hide();
+    eggapp.on("zhongjiang",function(event,data){
+        $(".p").hide();
+        $(".infopic").hide();
+        $(".jiang1").css({
+            "top":"-200px"
+        })
+
+        if(over==1){
+
+            $(".jiang1 .p1").show()
+
+        }
+        if(over==2){
+
+            $(".jiang1 .p2").show()
+
+        }
+        if(over==3){
+
+            $(".jiang1 .p3").show()
+
+        }
+        $(".jiang1").show().delay(300).animate({
+            "top":"100px"
+        },1000)
     })
-    var handleTouchyPinch = function (e, $target, data) {
-       console.log(data);
-    };
-    $('.chui').on('touchy-drag', handleTouchyPinch);
-    $('.chui').on('click', function(){console.log(1)});
+
+
+
 </script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 
