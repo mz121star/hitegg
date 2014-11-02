@@ -78,11 +78,12 @@ $(".egga").one("click", function (e) {
     var inter = window.setInterval(function () {
     $(a).css("background-image", "url(img/egg" + i + "_03.png)");
     i++;
-    if (i == 5) {
+    if (i == 7) {
     window.clearInterval(inter);
+	$(a).parent().css("-webkit-animation-name","none");
     $(".chui").removeClass("chuiaddw").removeClass("chuiadd");
     }
-    }, 60);
+    }, 80);
 
     over = over + 1;
     }).animate({
