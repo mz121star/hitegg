@@ -83,7 +83,7 @@ $(".egga").one("click", function (e) {
 	$(a).parent().css("-webkit-animation-name","none");
     $(".chui").removeClass("chuiaddw").removeClass("chuiadd");
     }
-    }, 80);
+    }, 200);
 
     over = over + 1;
     }).animate({
