@@ -127,6 +127,7 @@ body {
     background: url(img/bg.jpg) repeat-y center 0;
     -webkit-background-size: 100% auto;
     min-height: 100%;
+	overflow-x:hidden;
 }
 
 .bg {
