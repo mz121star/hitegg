@@ -340,6 +340,17 @@ body {
     margin: 2px;
     text-shadow: #3D3C3C 0px 6px 12px;
 }
+
+.chuiaddw{
+    -webkit-transition: transform 0.2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+}
+.chuiadd{
+    -webkit-transform: rotateZ(-18deg);
+    -moz-transform: rotateZ(-18deg);
+    -ms-transform: rotateZ(-18deg);
+    transform: rotateZ(-18deg) }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
