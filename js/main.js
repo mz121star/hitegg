@@ -1,13 +1,22 @@
 
-function playAudio(url) {
+var  playAudio=function(url) {
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', url);
-    audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
+    audioElement.setAttribute('preload', 'preload');
 
     $.get();
+
+    audioElement.addEventListener("load", function() {
+        audioElement.play();
+    }, true);
     audioElement.play();
     }
-
+ function flyAudio(){
+    playAudio("audio/fly.wav");
+}
+ function hiteAudio(){
+    playAudio("audio/break.wav");
+}
 (function (jQuery) {
 
     jQuery.eventEmitter = {
@@ -46,7 +55,7 @@ $(".egga").one("click", function (e) {
 
     if (over > 3)
     return false;
-    playAudio("audio/break.wav");
+   hiteAudio();
     var num = $(this).data("num");
     jiangxiang = num;
 
@@ -111,7 +120,8 @@ eggapp.on("zhongjiang", function (event, data) {
     "opacity": "1"
     }, 1000);
     window.setTimeout(function () {
-    playAudio("audio/fly.wav");
+
+       flyAudio();
     }, 500);
     });
 
