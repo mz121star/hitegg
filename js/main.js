@@ -57,6 +57,13 @@ $(".egga").one("click", function (e) {
     return false;
    hiteAudio();
     var num = $(this).data("num");
+    if(num==3){
+        $(".chui img").attr("src","img/chui2.png");
+    }
+    else{
+        if($(".chui img").attr("src")=="img/chui2.png")
+            $(".chui img").attr("src","img/chui1.png");
+    }
     jiangxiang = num;
 
     var a = $(".eggb" + num);
@@ -68,6 +75,11 @@ $(".egga").one("click", function (e) {
 
     console.log(l + ";;" + t)
     $(".chui").addClass("chuiaddw").addClass("chuiadd");
+    if(num==3){
+        l="a";
+    }
+
+
     $(".chui").animate({//锤子动画
     "top": t - 25,
     "left": l + 25
@@ -81,7 +93,7 @@ $(".egga").one("click", function (e) {
     if (i == 7) {
     window.clearInterval(inter);
 	$(a).parent().css("-webkit-animation-name","none");
-    $(".chui").removeClass("chuiaddw").removeClass("chuiadd");
+         $(".chui").removeClass("chuiaddw").removeClass("chuiadd");
     }
     }, 200);
 
@@ -91,6 +103,7 @@ $(".egga").one("click", function (e) {
     "left": l + 65,
     "-webkit-transform": "rotateZ(0deg)"
     }, 30);
+
     eggapp.emit("zhongjiang", {num: num});
     });
 $(".p").hide();
@@ -116,7 +129,7 @@ eggapp.on("zhongjiang", function (event, data) {
     }
 
     $(".jiang1").show().delay(300).animate({
-    "top": "40px",
+    "top": "0px",
     "left": "0px",
     "opacity": "1"
     }, 1000);
