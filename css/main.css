@@ -130,7 +130,7 @@ body {
     background: url(img/bg.jpg) repeat-y center 0;
     -webkit-background-size: 100% auto;
     min-height: 100%;
-	overflow-x:hidden;
+    overflow-x:hidden;
 }
 
 .bg {
@@ -183,10 +183,10 @@ body {
 
 .plane>span {
     position: relative;
-    width: 75px;
-    height: 112px;
+    width: 87px;
+    height: 136px;
     margin-left: -35px;
-    margin-top: -86px;
+    margin-top: -103px;
     display: block;
     background: url(img/2.png) no-repeat center 28px;
     -webkit-background-size: 70% auto;

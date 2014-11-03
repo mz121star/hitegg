@@ -46,8 +46,7 @@ var  playAudio=function(url) {
 var over = 0;
 var jiangxiang = 0;
 function App() {
-
-    }
+ }
 jQuery.extend(App.prototype, jQuery.eventEmitter);
 
 var eggapp = new App();
@@ -86,13 +85,14 @@ $(".egga").one("click", function (e) {
 
     }, 0, function () {
 
-    var i = 1;
+    var i =2;
+        $(a).parent().css("-webkit-animation-name","none");
     var inter = window.setInterval(function () {
-    $(a).css("background-image", "url(img/egg" + i + "_03.png)");
+    $(a).css("background-image", "url(img/d10" + i + "1.png)");
     i++;
-    if (i == 7) {
+    if (i == 8) {
     window.clearInterval(inter);
-	$(a).parent().css("-webkit-animation-name","none");
+
          $(".chui").removeClass("chuiaddw").removeClass("chuiadd");
     }
     }, 100);
