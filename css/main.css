@@ -9,7 +9,12 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@font-face {
+    font-family: 'hanyi';
 
+url('../font/hanyi.ttf') format('truetype'),
+
+}
 html,
 button,
 input,
@@ -343,6 +348,7 @@ body {
 .jiang1 p{
     margin: 2px;
     text-shadow: #3D3C3C 0px 6px 12px;
+    font-family: 'hanyi';
 }
 
 .chuiaddw{
