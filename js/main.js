@@ -133,11 +133,14 @@ $(".p").hide();
 eggapp.on("zhongjiang", function (event, data) {
     $(".p").hide();
     $(".infopic").hide();
-    if (over == 1 || over == 3) {
+    if ( over == 1) {
+        $(".jiang1").css({ "top": "1000px", "opacity": "0" });
+    }
+    if ( over == 3) {
     $(".jiang1").css({ "top": "-200px", "opacity": "0" });
     }
     if (over == 2) {
-    $(".jiang1").css({ "left": "-600px", "opacity": "0" });
+    $(".jiang1").css({ "top": "-200px", "opacity": "0" });
     }
 
 
@@ -149,7 +152,7 @@ eggapp.on("zhongjiang", function (event, data) {
     }
     if (over == 3) {
     $(".jiang1 .p3").show();
-        $(".p3").show().delay(1000).animate({
+        $(".p3").show().delay(1200).animate({
             "font-size":"2rem"
         }, 1000);
     }
