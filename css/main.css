@@ -356,6 +356,10 @@ body {
     -moz-transform: rotateZ(-18deg);
     -ms-transform: rotateZ(-18deg);
     transform: rotateZ(-18deg) }
+
+.p3{
+    font-size: 10px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

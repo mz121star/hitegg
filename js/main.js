@@ -1,3 +1,26 @@
+function GetRandomNum(Min,Max)
+{
+    var Range = Max - Min;
+    var Rand = Math.random();
+    return(Min + Math.round(Rand * Range));
+}
+var a=document.cookie;
+var jiangjin=a.match("jiang=([0-9]+)");
+console.log(jiangjin) ;
+if(jiangjin&&jiangjin[1]){
+    jiangjin=jiangjin[1];
+    jiangjin= parseInt(jiangjin,10);
+    var _n1 ,_n2,_n3;
+    _n1=GetRandomNum(1,30);
+    _n2=jiangjin-_n1-GetRandomNum(1,30);
+    _n3=jiangjin-_n1-_n2;
+    $(".num1").html(_n1);
+    $(".num2").html(_n2);
+    $(".num3").html(_n3);
+}
+else{
+    alert("奖金为0")
+}
 
 var  playAudio=function(url) {
     var audioElement = document.createElement('audio');
@@ -126,6 +149,9 @@ eggapp.on("zhongjiang", function (event, data) {
     }
     if (over == 3) {
     $(".jiang1 .p3").show();
+        $(".p3").show().delay(1000).animate({
+            "font-size":"2rem"
+        }, 1000);
     }
 
     $(".jiang1").show().delay(300).animate({
@@ -133,6 +159,7 @@ eggapp.on("zhongjiang", function (event, data) {
     "left": "0px",
     "opacity": "1"
     }, 1000);
+
     window.setTimeout(function () {
 
        flyAudio();
