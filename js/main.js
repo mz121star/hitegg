@@ -9,7 +9,7 @@ function GetRandomNum(Min, Max) {
 }
 var a = document.cookie;
 var jiangjin = a.match("jiang=([0-9]+)");
-console.log(jiangjin);
+jiangjin=[99,99];
 if (jiangjin && jiangjin[1]) {
     jiangjin = jiangjin[1];
     jiangjin = parseInt(jiangjin, 10);
@@ -105,13 +105,13 @@ eggapp.on("zhongjiang",
         if (over == 3) {
             $(".jiang1 .p3").show();
             $(".p3").show().delay(1200).animate({
-                    "font-size": "2rem"
+                    "font-size": "1.5rem"
                 },
                 1000);
         }
 
         $(".jiang1").show().delay(300).animate({
-                "top": "-42px",
+                "top": "0px",
                 "left": "0px",
                 "opacity": "1"
             },
@@ -138,7 +138,7 @@ breakEgg.config({
 
        },1000);
         if (over >= 3) return false;
-        hiteAudio();
+        //hiteAudio();
         var num =clicknum;
 
         jiangxiang = num;
