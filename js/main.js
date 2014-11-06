@@ -1,3 +1,7 @@
+$(function(){
+    $("#container").css({"width":$(window).width()*2+"px" });
+})
+
 function GetRandomNum(Min, Max) {
     var Range = Max - Min;
     var Rand = Math.random();
@@ -121,6 +125,7 @@ eggapp.on("zhongjiang",
         window.setTimeout(function(){
             if(over<3)
             breakEgg.init();
+            $("#hammer").show();
         },4000)
 
     });
@@ -128,6 +133,10 @@ var clicknum=1;
 breakEgg.config({
     imgSrc: "images/a.png" ,
     click: function(){
+       window.setTimeout(function(){
+           $("#hammer").hide();
+
+       },1000);
         if (over >= 3) return false;
         hiteAudio();
         var num =clicknum;
