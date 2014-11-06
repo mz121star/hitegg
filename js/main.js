@@ -119,6 +119,7 @@ eggapp.on("zhongjiang",
             },
             500);
         window.setTimeout(function(){
+            if(over<3)
             breakEgg.init();
         },2000)
 
@@ -127,7 +128,7 @@ var clicknum=1;
 breakEgg.config({
     imgSrc: "images/a.png" ,
     click: function(){
-        if (over > 3) return false;
+        if (over >= 3) return false;
         hiteAudio();
         var num =clicknum;
 
