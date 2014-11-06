@@ -278,19 +278,19 @@ body {
     -webkit-animation-duration:2s;
 }
 @-webkit-keyframes roate360{
-    0% {transform:rotate(0deg);}
-    10% {transform:rotate(30deg);}
-    20% {transform:rotate(60deg);}
-    30% {transform:rotate(90deg);}
-    40% {transform:rotate(120deg);}
-    50% {transform:rotate(150deg);}
-    60% {transform:rotate(180deg);}
-    70% {transform:rotate(210deg);}
-    75% {transform:rotate(240deg);}
-    80% {transform:rotate(270deg);}
-    90% {transform:rotate(300deg);}
-    95% {transform:rotate(330deg);}
-    100% {transform:rotate(360deg);}
+    0% {-webkit-transform:rotate(0deg);}
+    10% {-webkit-transform:rotate(30deg);}
+    20% {-webkit-transform:rotate(60deg);}
+    30% {-webkit-transform:rotate(90deg);}
+    40% {-webkit-transform:rotate(120deg);}
+    50% {-webkit-transform:rotate(150deg);}
+    60% {-webkit-transform:rotate(180deg);}
+    70% {-webkit-transform:rotate(210deg);}
+    75% {-webkit-transform:rotate(240deg);}
+    80% {-webkit-transform:rotate(270deg);}
+    90% {-webkit-transform:rotate(300deg);}
+    95% {-webkit-transform:rotate(330deg);}
+    100% {-webkit-transform:rotate(360deg);}
 
 }
 
