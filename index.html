@@ -20,12 +20,13 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-<div class="chui" id="chui">
+<div class="chui" id="chui" style="display: none">
     <img src="img/chui1.png" width="80"/>
 </div>
 <section class="stage">
-    <img class="bg" src="img/bg.jpg">
-
+    <img class="bg" src="img/bj.png">
+    <img class="yc" src="img/YC.png"  />
+      <div class="guize"><a href="#">活动规则</a> </div>
     <div class="info">
         <img src="img/info1.png" class="infopic">
         <span class="jiang1" style="top:-200px">
@@ -48,9 +49,9 @@
 </div>
     <div id="shape" class="cube on">
 
-        <div class="plane one"><span class="egga egga1" data-num="1"><figure class="eggb1">&nbsp;</figure></span></div>
-        <div class="plane two"><span class="egga egga2" data-num="2"><figure class="eggb2">&nbsp;</figure></span></div>
-        <div class="plane three"><span class="egga egga3" data-num="3"><figure class="eggb3">&nbsp;</figure></span>
+        <div class="plane one"><span class="egga  egga1" data-num="1"><figure class="eggb1 e2">&nbsp;</figure></span></div>
+        <div class="plane two"><span class="egga    egga2" data-num="2"><figure class="eggb2 e1 ">&nbsp;</figure></span></div>
+        <div class="plane three"><span class="egga   egga3" data-num="3"><figure class="eggb3 e3">&nbsp;</figure></span>
         </div>
        
 		<img src="img/d1021.png" style="display: none;">
@@ -66,6 +67,7 @@
 <script src="js/vendor/jquery-1.10.2.min.js"></script>
 <script src="js/hammer.min.js"></script>
 <script src="js/plugins.js"></script>
+<script src="js/breakEgg.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -73,17 +75,10 @@
 </body>
 <script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.min.js"></script>
 <script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script>
-<script src="js/breakEgg.js"></script>
-<script>
-    window.onload = function() {
-        breakEgg.config({
-            imgSrc: "images/a.png"
-        }).init();
 
 
-    }
-</script>
 <script type="text/javascript">
+
     function youziku19458() {
         var resultStr = $(".minijiantaiji").text();
         var md5 = "";
