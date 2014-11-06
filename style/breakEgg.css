@@ -1,0 +1,62 @@
+.container{
+    width: 370px;
+    height: 478px;
+    position: absolute;
+    top: 0px;
+}
+.hammer{
+    background: url(../images/hammer.png) top center no-repeat;
+    width: 115px;
+    height: 119px;
+    position:absolute;
+    top:90px;
+    left:367px;
+    z-index: 13;
+    outline:none;
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transition: transform .4s;
+    -o-transition: transform .4s;
+    transition: transform .4s;
+}
+.hammer.active{
+    -webkit-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
+.nest{
+    position:absolute;
+}
+.nest.back{
+    background: url(../images/nestBack.png) top center no-repeat;
+    width: 324px;
+    height: 146px;
+    top:213px;
+    /* left:115px; */
+    z-index: 9;
+}
+.nest.fore{
+    background: url(../images/nestFore.png) bottom center no-repeat;
+    width: 325px;
+    height: 200px;
+    top: 294px;
+    /* left:115px; */
+    z-index: 11;
+}
+#breakEgg{
+    position: absolute;
+    z-index: 10;
+}
+
+@keyframes shake{
+    50%{
+        transform: rotate(-25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

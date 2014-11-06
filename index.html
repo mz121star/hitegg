@@ -13,8 +13,8 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-
-
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/breakEgg.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -38,7 +38,16 @@
             <div class="p p3 minijiantaiji"><a href="#" class="button orange">去领钱</a></div>
         </span>
     </div>
+    <div class="container" id="container">
+    <div class="nest back"></div>
+    <canvas id="breakEgg">
+        你的浏览器不支持 canvas 画布，请更换现代浏览器
+    </canvas>
+    <div class="nest fore"></div>
+    <div class="hammer" id="hammer"></div>
+</div>
     <div id="shape" class="cube on">
+
         <div class="plane one"><span class="egga egga1" data-num="1"><figure class="eggb1">&nbsp;</figure></span></div>
         <div class="plane two"><span class="egga egga2" data-num="2"><figure class="eggb2">&nbsp;</figure></span></div>
         <div class="plane three"><span class="egga egga3" data-num="3"><figure class="eggb3">&nbsp;</figure></span>
@@ -64,6 +73,16 @@
 </body>
 <script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.min.js"></script>
 <script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script>
+<script src="js/breakEgg.js"></script>
+<script>
+    window.onload = function() {
+        breakEgg.config({
+            imgSrc: "images/a.png"
+        }).init();
+
+
+    }
+</script>
 <script type="text/javascript">
     function youziku19458() {
         var resultStr = $(".minijiantaiji").text();
