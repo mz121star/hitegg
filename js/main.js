@@ -121,7 +121,7 @@ eggapp.on("zhongjiang",
         window.setTimeout(function(){
             if(over<3)
             breakEgg.init();
-        },2000)
+        },4000)
 
     });
 var clicknum=1;
