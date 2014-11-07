@@ -6,7 +6,8 @@
     -ms-transform: scale(.6);
     -o-transform: scale(.6);
     transform: scale(.6);
-    left:-160px;
+   /*  left:-160px;*/
+    margin-left: -160px;
     top: -12px;
 }
 .hammer{
