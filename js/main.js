@@ -9,7 +9,7 @@ function GetRandomNum(Min, Max) {
 }
 var a = document.cookie;
 var jiangjin = a.match("jiang=([0-9]+)");
-jiangjin=[99,99];
+
 if (jiangjin && jiangjin[1]) {
     jiangjin = jiangjin[1];
     jiangjin = parseInt(jiangjin, 10);
