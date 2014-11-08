@@ -21,7 +21,7 @@ if (jiangjin && jiangjin[1]) {
     $(".num2").html(_n2);
     $(".num3").html(_n3);
 } else {
-    alert("奖金为0");
+    document.getElementById('mcover').style.display='block';
 }
 
 var playAudio = function(url) {
