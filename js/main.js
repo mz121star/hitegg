@@ -1,5 +1,5 @@
 $(function(){
-    $("#container").css({"width":$(window).width()*2-40 +"px" });
+    $("#container").css({"width":$(window).width()*2+50 +"px" });
 })
 
 function GetRandomNum(Min, Max) {
