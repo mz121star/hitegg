@@ -148,7 +148,7 @@ breakEgg.config({
              console.log(num);
              $(".e"+num).css("background-image", "url(img/e2.png)");
              clicknum++;
-         },1000)
+         },1000);
 
         over++;
 
