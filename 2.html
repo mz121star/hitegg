@@ -29,12 +29,13 @@
     <img class="yc" src="img/YC.png"  />
     <div class="guize"><a href="#">活动规则</a> </div>
    <div class="content ">
-       <p class="  p1  "><span class="yellow ">188元</span>奖金申请已发出</p>
-       <p class="  p1  ">在短融网完成首笔不低于5000元的投资，奖金将会发放到您的账户中，超过一个月自动清零</p>
-       <div class="phonebox">
+       <p class="  p1 yahei big" style="text-align: center"><span class="yellow totalval ">188元</span>奖金申请已发出</p>
+       <p class="  p1  yahei">在短融网完成首笔不低于5000元的投资，奖金将会发放到您的账户中，超过一个月自动清零</p>
+       <div class="phonebox yahei">
            <p>分享给好友才可以最终颁奖，至少有以为好友点击，否则奖金申领无效</p>
            <input onclick=" document.getElementById('mcover').style.display='block';" type="button" class="submit" value="分享给好友"  />
    </div>
+       <div class="lingqian"><a href="#">去短融网领钱</a> </div>
        </div>
 </section>
 <div id="mcover" onclick="document.getElementById('mcover').style.display='';" style="display:none;">
@@ -52,7 +53,11 @@
 
 
 <script type="text/javascript">
-
+$(function(){
+    var a = document.cookie;
+    var jiangjin = a.match("jiang=([0-9]+)");
+    $(".totalval").html(jiangjin||"0"+"元")
+})
 
 </script>
 </html>

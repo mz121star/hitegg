@@ -132,6 +132,7 @@ eggapp.on("zhongjiang",
 var clicknum=1;
 breakEgg.config({
     imgSrc: "images/a.png" ,
+    hammer: "egg",
     click: function(){
        window.setTimeout(function(){
            $("#hammer").hide();

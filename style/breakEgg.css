@@ -78,3 +78,11 @@
         transform: rotate(0deg);
     }
 }
+#egg{
+    width: 175px;
+    height: 200px;
+    position: absolute;
+    top:155px;
+    left:218px;
+    z-index: 14;
+}

@@ -695,12 +695,15 @@ body {
     padding: 20px;
 }
 .phonebox{
-    height: 149px;
+    height: 147px;
     width: 100%;
-    background-color: rgb(59, 197, 197);
-    border: 1px solid rgb(32, 197, 97);
+    /* background-color: rgb(59, 197, 197); */
+    /* border: 1px solid rgb(32, 197, 97); */
     text-align: center;
+    margin-top: 58px;
 }
+
+.phonebox {}
 .phone{
     line-height: 20px;
     width: 78%;
@@ -719,3 +722,7 @@ body {
 
 
 }
+.yahei{font-family:"Microsoft YaHei","微软雅黑","Microsoft JhengHei","华文细黑",STHeiti,MingLiu}
+.big{font-size: 1.5rem}
+.lingqian{text-align: right}
+.lingqian a{text-decoration: none;color: #fff}
