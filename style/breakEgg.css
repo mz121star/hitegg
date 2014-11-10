@@ -1,13 +1,15 @@
+
 .container{
-    width: 600px;
+    width: 550px;
     height: 478px;
+    overflow: hidden;
     position: absolute;
     -webkit-transform: scale(.6);
     -ms-transform: scale(.6);
     -o-transform: scale(.6);
     transform: scale(.6);
    /*  left:-160px;*/
-    margin-left: -160px;
+    margin-left: -130px;
     top: -12px;
 }
 .hammer{

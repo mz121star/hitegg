@@ -144,9 +144,10 @@ textarea {
 }
 body {
     max-width: 640px;
-    margin: auto;
+    margin:0 auto;
     background: url(img/bg.jpg) repeat-y center 0;
     -webkit-background-size: 100% auto;
+    background-size: 100% auto;
     min-height: 100%;
     overflow-x:hidden;
 }

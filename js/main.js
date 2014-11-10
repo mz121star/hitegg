@@ -1,6 +1,6 @@
-$(function(){
-    $("#container").css({"width":$(window).width()*2+40 +"px" });
-})
+//$(function(){
+//  $(".main-box").css({"width":$(window).width()*2 +"px" });
+//})
 
 function GetRandomNum(Min, Max) {
     var Range = Max - Min;
