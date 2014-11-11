@@ -1,5 +1,7 @@
 $(function(){
     $(".main-box").css({"width":$(window).width() +"px" });
+   var w=($(window).width()-$("#mcover img").width())/2
+    $("#mcover img").css({"left":w})  ;
 })
 
 function GetRandomNum(Min, Max) {
