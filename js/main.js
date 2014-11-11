@@ -80,7 +80,7 @@ var eggapp = new App();
 $(".p").hide();
 eggapp.on("zhongjiang",
     function(event, data) {
-        $(".jiang1 .p1").hide(1);
+        $(".jiang1 .p1").hide();
         $(".p").hide();
         $(".infopic").hide();
         if (over == 1) {
@@ -141,6 +141,7 @@ breakEgg.config({
     hammer: "egg",
     x: 0,
     click: function(){
+        $(".jiang1 .p1").hide();
        window.setTimeout(function(){
            $("#hammer").hide();
 
