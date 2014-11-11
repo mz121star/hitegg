@@ -15,57 +15,57 @@
     /*margin-left: -130px;*/
     /*top: -12px;*/
    	position: relative;
-	left:-130px;
+	/*left:-130px;*/
 }
-@media only screen and (min-width: 321px) and (max-width: 380px) {
+/*@media only screen and (min-width: 321px) and (max-width: 380px) {
 	.margin-box{
 		width: 90%;
 		margin: 0px auto;
-		/*margin-left: 30px;*/
+		
 	}
 }
 @media only screen and (min-width: 381px) and (max-width: 420px) {
 	.margin-box{
 		width: 78%;
 		margin: 0px auto;
-		/*margin-left: 30px;*/
+		
 	}
 }
 @media only screen and (min-width: 421px) and (max-width: 480px) {
 	.margin-box{
 		width: 66%;
 		margin: 0px auto;
-		/*margin-left: 30px;*/
+		
 	}
 }
 @media only screen and (min-width: 481px) and (max-width: 540px) {
 	.margin-box{
 		width: 54%;
 		margin: 0px auto;
-		/*margin-left: 30px;*/
+		
 	}
 }
 @media only screen and (min-width: 541px) and (max-width: 600px) {
 	.margin-box{
 		width: 52%;
 		margin: 0px auto;
-		/*margin-left: 30px;*/
+		
 	}
 }
 @media only screen and (min-width: 601px) and (max-width: 660px) {
 	.margin-box{
 		width: 48%;
 		margin: 0px auto;
-		/*margin-left: 30px;*/
+		
 	}
 }
 @media only screen and (min-width: 661px) and (max-width: 800px) {
 	.margin-box{
 		width: 50%;
 		margin: 0px auto;
-		/*margin-left: 30px;*/
+		
 	}
-}
+}*/
 .hammer{
     background: url(../images/hammer.png) top center no-repeat;
     width: 115px;
