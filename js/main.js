@@ -1,6 +1,6 @@
-//$(function(){
-//  $(".main-box").css({"width":$(window).width()*2 +"px" });
-//})
+$(function(){
+    $(".main-box").css({"width":$(window).width() +"px" });
+})
 
 function GetRandomNum(Min, Max) {
     var Range = Max - Min;
@@ -133,6 +133,7 @@ var clicknum=1;
 breakEgg.config({
     imgSrc: "images/a.png" ,
     hammer: "egg",
+    x: 0,
     click: function(){
        window.setTimeout(function(){
            $("#hammer").hide();

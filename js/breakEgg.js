@@ -4,13 +4,14 @@ var breakEgg = {
   imageReady: false,
   start: false,
   end: false,
-  x: 40,
+  x: 0,
   y: -240,
   y1: 240,
   width: 0,
   height: 0,
   frame: 0,
   alpha: 1,
+  endFrame: 7,
   redrawTime: 1000 / 7,
   config: function( opts ){
     var self = this;
@@ -19,6 +20,7 @@ var breakEgg = {
     self.hammer = opts.hammer;
     self.imgSrc = opts.imgSrc;
     self.click = opts.click;
+    self.x = opts.x && opts.x;
 
     return self;
   },
@@ -91,7 +93,7 @@ var breakEgg = {
 
      self.ctx.globalAlpha = self.alpha;
 
-     self.ctx.drawImage(self.img, offw, offh, width, height, self.x, self.y, self.width, self.height);
+     self.ctx.drawImage(self.img, offw, offh, width, height, self.x, self.y, width, height);
      if( ! opts) self.frame++;
   },
   imgIn: function(){
@@ -105,8 +107,8 @@ var breakEgg = {
   },
   fade: function(){
     var self = breakEgg;
-    // self.alpha -= 1 / 15;
-    self.alpha -= 1;
+    self.alpha -= 1 / 15;
+    // self.alpha -= 1;
 
     self.ctx.clearRect( 0, 0, 1000, 1000 );
      self.redraw(1);
@@ -120,11 +122,11 @@ var breakEgg = {
   },
   update: function() {
     var self = breakEgg;
-    if ( self.frame < 8 && self.start ) {
+    if ( self.frame < self.endFrame && self.start ) {
       self.redraw();
       setTimeout( self.update, self.redrawTime );
     }
-    else if( ( self.frame == 0 || self.frame == 8 ) && ! self.imageReady ){
+    else if( ( self.frame == 0 || self.frame == self.endFrame ) && ! self.imageReady ){
       if( self.end ) {
         self.fade();
         setTimeout( self.update, 500/15 );
