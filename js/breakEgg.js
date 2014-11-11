@@ -92,15 +92,7 @@ var breakEgg = {
      var offh = row * height;
 
      self.ctx.globalAlpha = self.alpha;
-     
-     if( self.offw === undefined ){
-     	var ww = $(window).width();
-     	var point = ww /self.width;
-     	self.offw = ( ww - self.width ) *point;
-     	
-     	var cow = self.offw//ww > 800 ? ( ww - self.width ) /2 -120 : self.offw /2;
-    	$(".container").css("left", cow);
-     }
+
      self.ctx.drawImage(self.img, offw, offh, width, height, self.x, self.y, width, height);
      if( ! opts) self.frame++;
   },
