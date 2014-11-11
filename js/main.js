@@ -77,6 +77,7 @@ var eggapp = new App();
 $(".p").hide();
 eggapp.on("zhongjiang",
     function(event, data) {
+        $(".jiang1 .p1").hide(1);
         $(".p").hide();
         $(".infopic").hide();
         if (over == 1) {
