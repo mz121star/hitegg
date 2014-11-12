@@ -16,6 +16,7 @@ var a = document.cookie;
 var jiangjin = a.match("jiang=([0-9]+)");
 
 if (jiangjin && jiangjin[1]) {
+
     jiangjin = jiangjin[1];
     jiangjin = parseInt(jiangjin, 10);
     var _n1, _n2, _n3;
@@ -25,6 +26,11 @@ if (jiangjin && jiangjin[1]) {
     $(".num1").html(_n1);
     $(".num2").html(_n2);
     $(".num3").html(_n3);
+    if( jiangjin==0){
+        $(".num1").html("0");
+        $(".num2").html("0");
+        $(".num3").html("0");
+    }
 } else {
     document.getElementById('mcover').style.display='block';
 }
