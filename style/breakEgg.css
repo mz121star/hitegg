@@ -93,7 +93,7 @@
 #line{
     width: 97px;
     height: 87px;
-    background: url(../images/r2.png) no-repeat;
+   /* background: url(../images/r2.png) no-repeat;*/
     position:absolute;
     top:-30px;
     right:-20px;

@@ -32,7 +32,7 @@ if (jiangjin && jiangjin[1]) {
         $(".num3").html("0");
     }
 } else {
-    document.getElementById('mcover').style.display='block';
+  //  document.getElementById('mcover').style.display='block';
 }
 
 var playAudio = function(url) {
