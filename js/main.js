@@ -1,7 +1,7 @@
 $(function(){
     $(".main-box").css({"width":$(window).width() +"px" });
    var w=($(window).width()-$("#mcover img").width())/2 ;
-    $("#mcover img").css({"left":w})  ;
+    $("#mcover img").css({"left":w}).show() ;
     $(".main-box").css("top",($(window).height()-478)/3+"px")   ;
     $("#shape").css("top",($(window).height()-478)/3+420+"px")    ;
 
